@@ -13,7 +13,7 @@ If you don't want Gunbot or a symlink to it in /opt/gunbot you'll need to edit t
 To get started, as root:
 
 ```
-cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/peniscoin/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts;sudo apt-get install nodejs; sudo apt-get install npm; sudo npm install -g pm2
+cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/RchGrav/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts;sudo apt-get install nodejs; sudo apt-get install npm; sudo npm install -g pm2
 ```
 
 ## Configuration
@@ -104,12 +104,6 @@ perhaps also clean up the pm2 process list for example with pm2 delete all, prio
 running anything in gunbot, if you're just experimenting with the scripts to see what they create so as to avoid having to manually delete
 everything.
 
-## Future improvements
 
-Just FYI I probably won't push anything to this repo again, I tend to prefer simple things that I understand, TBH I recommend modifying
-this stuff for yourself, partly because doing so will help you understand what it's doing rather than trusting something automated to
-do what you want. It might be nice to be able to automatically add and remove pairs in the scripts without having to manually start/stop
-them, however I don't find that particularly important so probably won't implement it, you're welcome to fork the repo or send a pull
-request if you have any improvements, but please don't ask for any features as the answer is likely to be no.
 
 
