@@ -1,7 +1,8 @@
 # GunBot config management scripts
 
-These scripts are what I use to manage my GunBot configs. As usual, no responsibility is taken for any use you may make of them - check your own configs
-carefully if using them, and be aware that you are fully responsible for whatever your GunBot does.
+This is not a replacement for understanding how to configure gunbot, but instead is meant to illustrate one possible deployment scenario utilizing multiple folders..  - check your own configs carefully if using these scripts, and be aware that you are fully responsible for whatever your GunBot does.   I appreciate your feedback.  This project is forked from another github user because I liked what he did with his but this one is being rewritten piece by piece.  As it evolves it may look less and less like the original project.  The name is the same to protect the innocent. Although it may need to be changed at some point as it mutates away from the original code..  We shall see... 
+
+![alt text](http://i.imgur.com/sMnFZro.png)
 
 ## Getting Started
 
