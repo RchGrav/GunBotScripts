@@ -42,7 +42,7 @@ fi
 if [ ! -d "/opt/gunbot_backup/${GUNBOTFLDR}" ]; then
         mkdir -p /opt/gunbot_backup/${GUNBOTFLDR}
     else
-        cp --backup=t $GUNBOTROOT /opt/gunbot_backup/${GUNBOTFLDR}
+        cp -R --backup=t $GUNBOTROOT/* /opt/gunbot_backup/${GUNBOTFLDR}/
 fi
 
 if [ ! -d "$GUNBOTROOT/yaml" ]; then
