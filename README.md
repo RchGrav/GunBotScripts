@@ -13,7 +13,8 @@ If you don't want Gunbot or a symlink to it in /opt/gunbot you'll need to edit t
 To get started, as root:
 
 ```
-cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/RchGrav/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts ```
+cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/RchGrav/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts 
+```
 
 ## Configuration
 
