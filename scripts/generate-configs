@@ -16,9 +16,16 @@ GLOBALSTARTSCRIPT=gbstart
 GLOBALSTOPSCRIPT=gbstop
 GLOBALCLEARPM2SCRIPT=gbclear
 
+echo "#!/bin/sh">$GLOBALSTOPSCRIPT
+echo "#!/bin/sh">$GLOBALSTARTSCRIPT
+echo "#!/bin/sh">$GLOBALCLEARPM2SCRIPT
+
 BASEPATH=/opt
 
 for base in $BASE; do
+echo "cd $BASE_DIR">>$GLOBALSTARTSCRIPT
+
+
 
 if [ "$EXCHANGE" = "poloniex" ] && [ "$base" = "btc" ]; then
    GUNBOTFLDR=gunbot
@@ -49,12 +56,6 @@ cp $BASE_DIR/templates/ALLPAIRS-params.js $GUNBOTROOT
 cd $BASE_DIR/
 
 echo "apps:">$YAML
-
-echo "#!/bin/sh">$GLOBALSTOPSCRIPT
-echo "#!/bin/sh">$GLOBALSTARTSCRIPT
-echo "cd $BASE_DIR">>$GLOBALSTARTSCRIPT
-echo "#!/bin/sh">$GLOBALCLEARPM2SCRIPT
-
 
 for pair in `cat $BASE_DIR/pairs/${EXCHANGE}_${base}| tr "\n" " "`; do
 
