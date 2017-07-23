@@ -25,8 +25,6 @@ BASEPATH=/opt
 for base in $BASE; do
 echo "cd $BASE_DIR">>$GLOBALSTARTSCRIPT
 
-
-
 if [ "$EXCHANGE" = "poloniex" ] && [ "$base" = "btc" ]; then
    GUNBOTFLDR=gunbot
 else
@@ -74,7 +72,7 @@ for pair in `cat $BASE_DIR/pairs/${EXCHANGE}_${base}| tr "\n" " "`; do
         echo "pm2 stop ${EXCHANGE}-${pair}">>$GLOBALSTOPSCRIPT
         echo "pm2 delete ${EXCHANGE}-${pair}">>$GLOBALCLEARPM2SCRIPT
 
-       cp --backup=t $BASE_DIR/templates/${EXCHANGE}-config-template.js $GUNBOTROOT/${EXCHANGE}-${pair}-config.js
+       cp $BASE_DIR/templates/${EXCHANGE}-config-template.js $GUNBOTROOT/${EXCHANGE}-${pair}-config.js
 
 done; done
 
