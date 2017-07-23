@@ -13,14 +13,11 @@ If you don't want Gunbot or a symlink to it in /opt/gunbot you'll need to edit t
 To get started, as root:
 
 ```
-cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/RchGrav/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts;sudo apt-get install nodejs; sudo apt-get install npm; sudo npm install -g pm2
-```
+cd /opt/gunbot; sudo apt-get install git; git clone https://github.com/RchGrav/GunBotScripts; mv GunBotScripts/scripts .; rm -rf GunBotScripts
 
 ## Configuration
 
-Now you have an /opt/gunbot/scripts directory, within which you will find 2 folders (templates and pairs) with files inside them for you to configure,
-the pairs files contain lists of pairs in the format BTC_ALT where ALT is the symbol for the altcoin. If you do not use Bittrex or Kraken, simply
-remove the example lines from those files and leave an empty file there.
+Inside /opt/gunbot you will find 2 folders (templates and pairs) with files inside them for you to configure.
 
 ## Per-exchange template files
 
@@ -64,8 +61,11 @@ the same values for the other exchanges if you run them.
 ## Generating the configs and scripts
 
 So you've edited the Pairs files to set up what pairs to trade, you've edited the per-exchange template files to set the size of trades, strategy and
-API calls timing if needed, and you've edited the global ALLPAIRS template to include your API keys. You're now ready to run the generate-configs
-script. It will generate a bunch of exchange-BTC_PAIR-config.js type files in GUNBOTROOT (normally /opt/gunbot), a bunch of YAML files for PM2
+API calls timing if needed, and you've edited the global ALLPAIRS template to include your API keys. 
+
+Take a look inside of the generate-config file and adjust the "Exchange" and "Base" variable to specify which folders you would like to build out.   The BTC base pair will be in the /opt/gunbot folder but all of the rest will follow the naming convention of /opt/gunbot_exchange_pair, based upon which you select.  You are currently limited to the pairs I have configured but it should be self evident how to add more.   
+
+You're now ready to run the generate-configs script. It will generate a bunch of exchange-BTC_PAIR-config.js type files in GUNBOTROOT (normally /opt/gunbot), a bunch of YAML files for PM2
 in GUNBOTROOT/YAMLs, a global allpairs.yaml file in GUNBOTROOT, and a bunch of scripts in GUNBOTROOT/scripts such as start-all-pairs
 
 So normally, in the most basic case, at this point, assuming nothing conflicting is already running and it's a fresh start, you could run the
@@ -95,15 +95,4 @@ exchange is simply to edit the exchange template file then just run generate-con
 this process is dumb, and will overwrite your /opt/gunbot/ALLPAIRS-params.js with the template version as well as overwriting all the
 pairs on the other exchanges where you didn't change anything in the config, so although it should usually be harmless if those files
 haven't changed in /opt/gunbot, it may also not be what you want so think through what it's going to do before running it.
-
-## Wiping clean and starting again
-
-The wipe_configs script will clean up everything that generate_configs created. Use only if you're sure that's what you want. It does not stop
-any running pairs - if gunbot was running, you would first want to use pm2 stop to stop the relevant pairs (possibly pm2 stop all) and
-perhaps also clean up the pm2 process list for example with pm2 delete all, prior to running wipe_configs. It's mainly useful PRIOR to actually
-running anything in gunbot, if you're just experimenting with the scripts to see what they create so as to avoid having to manually delete
-everything.
-
-
-
 
