@@ -2,7 +2,7 @@
 
 This is not a replacement for understanding how to configure gunbot, but instead is meant to illustrate one possible deployment scenario utilizing multiple folders..  - check your own configs carefully if using these scripts, and be aware that you are fully responsible for whatever your GunBot does.   I appreciate your feedback.  This project is forked from another github user because I liked what he did with his but this one is being rewritten piece by piece.  As it evolves it may look less and less like the original project.  The name is the same to protect the innocent. Although it may need to be changed at some point as it mutates away from the original code..  
 
-NOTE: Any existing files should be moved to the /opt/gunbot_backup folder and numbered accordingly.. Just in case you want to reference your old settings or whatever.. ya know.. I'm just looking out for you guys!  
+Alt-H2 NOTE: Any existing files should be moved to the /opt/gunbot_backup folder and numbered accordingly.. Just in case you want to reference your old settings or whatever.. ya know.. I'm just looking out for you guys!  
 
 ![alt text](http://i.imgur.com/sMnFZro.png)
 
