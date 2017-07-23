@@ -19,7 +19,7 @@ If you don't want Gunbot or a symlink to it in /opt/gunbot you'll need to edit t
 To get started, as root:
 
 ```
-cd /opt/gunbot; wget https://github.com/RchGrav/GunBotScripts/archive/master.zip -O wgstemp.zip; unzip wgstemp.zip;  mv GunBotScripts-master/scripts/ .; rm -rf GunBotScripts-master; rm wgstemp.zip
+cd /opt/gunbot; wget https://github.com/RchGrav/GunBotScripts/archive/master.zip -O wgstemp.zip; unzip wgstemp.zip; mv GunBotScripts-master/scripts/ .; rm -rf GunBotScripts-master; rm wgstemp.zip
 ```
 
 ## Configuration
