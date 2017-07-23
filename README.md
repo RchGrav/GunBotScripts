@@ -5,7 +5,9 @@ This is not a replacement for understanding how to configure gunbot, but instead
 ![alt text](http://i.imgur.com/sMnFZro.png)
 
 Abandon hope all ye who enter here*
+
 (The inscription at the entrance to Hell.)
+
 
 ## Getting Started
 
